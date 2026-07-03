@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-07-03T20:51:52.058Z",
+  "updatedAt": "2026-07-03T20:55:39.128Z",
   "videos": [
-    "YppdsVN5N_A",
+    "XU22_isH_lw",
     "Xx1Q__7UQIM",
     "kv_mgG0Sw9w",
     "PZ8Ftah0LdA"
@@ -9,8 +9,8 @@
   "activeLives": [
     {
       "name": "CNN Brasil",
-      "videoId": "YppdsVN5N_A",
-      "title": "AO VIVO: CNN 360º - 03/07/2026"
+      "videoId": "XU22_isH_lw",
+      "title": "AO VIVO: HORA H - 03/07/2026"
     },
     {
       "name": "Revista Oeste",
@@ -34,8 +34,8 @@
     },
     {
       "name": "Jovem Pan News",
-      "videoId": "_0dl_wrJHG0",
-      "title": "JÁ JÁ: ARGENTINA DE MESSI ENCARA CABO VERDE DE VOZINHA!; ANCELOTTI TEM NOVO TITULAR??? | PAN NA ÁREA"
+      "videoId": "VNEdG0lb-gs",
+      "title": "Argentina x Cabo Verde - AO VIVO - 03/07/2026 - Copa do Mundo"
     },
     {
       "name": "SBT News",
@@ -56,6 +56,11 @@
       "name": "RedeTV News",
       "videoId": "Xl_7nMeXxxI",
       "title": "[AO VIVO]  REDETV! NOTÍCIAS - 2ª EDIÇÃO | 03/07/2026"
+    },
+    {
+      "name": "TV Cultura",
+      "videoId": "ELLZkFzkx1A",
+      "title": "SERÁ QUE TEREMOS NOVIDADES NA TOKU-FRIDAY? | ANTIMATÉRIA - ENERGIA GEEK | 03/07/2026"
     },
     {
       "name": "TV Brasil",
