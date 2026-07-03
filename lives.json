@@ -1,0 +1,138 @@
+{
+  "updatedAt": "2026-07-03T18:00:56.918Z",
+  "videos": [
+    "YppdsVN5N_A",
+    "edRiX4Otdaw",
+    "XJn-gBhPzLs",
+    "PZ8Ftah0LdA"
+  ],
+  "activeLives": [
+    {
+      "name": "CNN Brasil",
+      "videoId": "YppdsVN5N_A",
+      "title": "AO VIVO: CNN 360º - 03/07/2026"
+    },
+    {
+      "name": "Revista Oeste",
+      "videoId": "edRiX4Otdaw",
+      "title": "FAROESTE À BRASILEIRA, COM GUSTAVO SEGRÉ | 03/07/26"
+    },
+    {
+      "name": "Gazeta do Povo",
+      "videoId": "XJn-gBhPzLs",
+      "title": "🔴O cerco de Trump aumentou: Magnitsky agora mira Gilmar Mendes e família de Moraes | SEM RODEIOS"
+    },
+    {
+      "name": "BandNews FM",
+      "videoId": "PZ8Ftah0LdA",
+      "title": "🔴[AO VIVO] Austrália x Egito | Copa Do Mundo Fifa 2026 | 03/07/2026"
+    },
+    {
+      "name": "Record News",
+      "videoId": "XL_WqF1F4dA",
+      "title": "Conexão Record News - 03/07/2026"
+    },
+    {
+      "name": "Jovem Pan News",
+      "videoId": "qkCD7tL269Y",
+      "title": "TEMPO REAL - 03/07/26"
+    },
+    {
+      "name": "UOL",
+      "videoId": "2JodcuKiqmg",
+      "title": "UOL News 2ª Edição com Diego Sarza com Daniela Lima e Leonardo Sakamoto | 3 de julho de 2026"
+    },
+    {
+      "name": "SBT News",
+      "videoId": "R6t6jxJ4J1M",
+      "title": "🔴 AO VIVO: CENTRAL, com Eduardo Gayer | SBT News | 03/07/2026"
+    },
+    {
+      "name": "GloboNews",
+      "videoId": "ZE2nT3PWveA",
+      "title": "Andréia Sadi entrevista o ex-árbitro de futebol e comentarista Arnaldo Cezar Coelho"
+    },
+    {
+      "name": "Band Jornalismo",
+      "videoId": "fgXNWJMUggg",
+      "title": "[AO VIVO] JORNAL DA NOITE  - 03/07/2026"
+    },
+    {
+      "name": "RedeTV News",
+      "videoId": "Xl_7nMeXxxI",
+      "title": "[AO VIVO]  REDETV! NOTÍCIAS - 2ª EDIÇÃO | 03/07/2026"
+    },
+    {
+      "name": "TV Cultura",
+      "videoId": "ELLZkFzkx1A",
+      "title": "SERÁ QUE TEREMOS NOVIDADES NA TOKU-FRIDAY? | ANTIMATÉRIA - ENERGIA GEEK | 03/07/2026"
+    },
+    {
+      "name": "TV Brasil",
+      "videoId": "6LJvonU2HB4",
+      "title": "Repórter Brasil, 03/07/2026"
+    }
+  ],
+  "allChannels": [
+    {
+      "name": "CNN Brasil",
+      "url": "https://www.youtube.com/@CNNbrasil/streams"
+    },
+    {
+      "name": "Revista Oeste",
+      "url": "https://www.youtube.com/@RevistaOeste/streams"
+    },
+    {
+      "name": "Gazeta do Povo",
+      "url": "https://www.youtube.com/@gazetadopovo/streams"
+    },
+    {
+      "name": "BandNews FM",
+      "url": "https://www.youtube.com/@RadioBandNewsFM/streams"
+    },
+    {
+      "name": "Record News",
+      "url": "https://www.youtube.com/@recordnews/streams"
+    },
+    {
+      "name": "Jovem Pan News",
+      "url": "https://www.youtube.com/@JovemPanNews/streams"
+    },
+    {
+      "name": "UOL",
+      "url": "https://www.youtube.com/@uol/streams"
+    },
+    {
+      "name": "SBT News",
+      "url": "https://www.youtube.com/@sbtnews/streams"
+    },
+    {
+      "name": "Metrópoles",
+      "url": "https://www.youtube.com/@Metropoles/streams"
+    },
+    {
+      "name": "BandNews TV",
+      "url": "https://www.youtube.com/@BandNewsTV/streams"
+    },
+    {
+      "name": "GloboNews",
+      "url": "https://www.youtube.com/@GloboNews/streams"
+    },
+    {
+      "name": "Band Jornalismo",
+      "url": "https://www.youtube.com/@BandJornalismo/streams"
+    },
+    {
+      "name": "RedeTV News",
+      "url": "https://www.youtube.com/@RedeTV/streams"
+    },
+    {
+      "name": "TV Cultura",
+      "url": "https://www.youtube.com/@tvcultura/streams"
+    },
+    {
+      "name": "TV Brasil",
+      "url": "https://www.youtube.com/@TVBrasil/streams"
+    }
+  ]
+}

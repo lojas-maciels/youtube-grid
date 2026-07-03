@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Grid de transmissões ao vivo do YouTube - Acompanhe os principais canais de notícias brasileiros">
+    <title>📺 YouTube Live Grid - Notícias ao Vivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a25;
+            --bg-hover: #252535;
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-tertiary: #a855f7;
+            --accent-glow: rgba(99, 102, 241, 0.4);
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --success: #10b981;
+            --success-glow: rgba(16, 185, 129, 0.3);
+            --danger: #ef4444;
+            --danger-glow: rgba(239, 68, 68, 0.3);
+            --warning: #f59e0b;
+            --hero-height: 50vh;
+            --hero-columns: 8;
+        }
+
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            min-height: 100vh;
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        /* Background Gradients */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse 80% 50% at 10% 20%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 90% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse 50% 30% at 50% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        /* Header Premium */
+        header {
+            text-align: center;
+            margin-bottom: 16px;
+            padding: 20px 24px;
+            background: linear-gradient(135deg, rgba(26, 26, 37, 0.9) 0%, rgba(18, 18, 26, 0.95) 100%);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-primary), var(--accent-secondary), transparent);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .header-stats {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        .stat-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .stat-badge.live {
+            background: var(--danger-glow);
+            color: var(--danger);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .stat-badge.channels {
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--accent-primary);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .stat-badge.time {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--danger);
+            border-radius: 50%;
+            animation: pulse 1.5s ease-in-out infinite;
+            box-shadow: 0 0 10px var(--danger);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.9);
+            }
+        }
+
+        /* Controls Container */
+        .controls-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Size Control */
+        .size-control {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+        }
+
+        .size-control svg {
+            color: var(--accent-primary);
+            flex-shrink: 0;
+        }
+
+        .size-control label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .size-control input[type="range"] {
+            width: 120px;
+            height: 6px;
+            background: var(--bg-primary);
+            border-radius: 5px;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        .size-control input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-glow);
+            transition: transform 0.2s;
+        }
+
+        .size-control input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+
+        .size-value {
+            font-size: 0.85rem;
+            color: var(--accent-primary);
+            font-weight: 700;
+            min-width: 45px;
+            text-align: center;
+            background: rgba(99, 102, 241, 0.1);
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+
+        /* Control Panel */
+        .control-panel {
+            flex: 1;
+            min-width: 300px;
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            border-radius: 14px;
+            padding: 14px 18px;
+            border: 1px solid var(--border-color);
+        }
+
+        .control-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            color: var(--accent-primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .control-form {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-group.grow {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .control-form label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .control-form select,
+        .control-form input {
+            padding: 10px 14px;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .control-form select:focus,
+        .control-form input:focus {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+
+        .control-form select {
+            cursor: pointer;
+        }
+
+        .apply-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 18px;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .apply-btn:active {
+            transform: translateY(0);
+        }
+
+        .feedback-message {
+            margin-top: 10px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            display: none;
+            font-weight: 500;
+        }
+
+        .feedback-message.success {
+            display: block;
+            background: var(--success-glow);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .feedback-message.error {
+            display: block;
+            background: var(--danger-glow);
+            color: var(--danger);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: auto;
+            grid-auto-flow: dense;
+            gap: 12px;
+            align-items: start;
+        }
+
+        /* Card Sizes */
+        .card-hero {
+            grid-column: span var(--hero-columns);
+            height: var(--hero-height);
+            grid-row: span 2;
+        }
+
+        .card-secondary {
+            grid-column: span 3;
+            aspect-ratio: 16/9;
+            min-width: 0;
+        }
+
+        .video-card {
+            position: relative;
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px) scale(1.01);
+            border-color: var(--accent-primary);
+            box-shadow:
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px var(--accent-glow);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Audio Control Button */
+        .audio-control {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            width: 42px;
+            height: 42px;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(12px);
+            border: 2px solid var(--border-hover);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10;
+        }
+
+        .audio-control:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            transform: scale(1.15);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .audio-control svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--text-primary);
+            transition: fill 0.2s;
+        }
+
+        .audio-control.unmuted {
+            background: var(--success);
+            border-color: var(--success);
+            box-shadow: 0 0 15px var(--success-glow);
+        }
+
+        /* Status Badge */
+        .status-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(12px);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 10;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+
+        .status-badge.muted {
+            color: var(--text-secondary);
+        }
+
+        .status-badge.unmuted {
+            color: var(--success);
+            background: rgba(16, 185, 129, 0.2);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        .status-badge.locked {
+            color: var(--accent-secondary);
+            background: rgba(139, 92, 246, 0.2);
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        /* Channel Name */
+        .channel-name {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+            z-index: 10;
+            max-width: 65%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Live Badge on Card */
+        .live-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--danger);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 10;
+            box-shadow: 0 0 15px var(--danger-glow);
+        }
+
+        .live-badge .dot {
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Lock Button */
+        .lock-btn {
+            position: absolute;
+            top: 10px;
+            right: 55px;
+            width: 32px;
+            height: 32px;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.2s;
+            opacity: 0;
+        }
+
+        .video-card:hover .lock-btn {
+            opacity: 1;
+        }
+
+        .lock-btn:hover {
+            background: var(--accent-secondary);
+            border-color: var(--accent-secondary);
+        }
+
+        .lock-btn svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--text-secondary);
+        }
+
+        .lock-btn.locked {
+            background: var(--accent-secondary);
+            border-color: var(--accent-secondary);
+            opacity: 1;
+        }
+
+        .lock-btn.locked svg {
+            fill: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 1400px) {
+            :root {
+                --hero-columns: 8;
+            }
+
+            .card-hero {
+                grid-row: span 2;
+            }
+
+            .card-secondary {
+                grid-column: span 3;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            :root {
+                --hero-columns: 12;
+            }
+
+            .card-hero {
+                height: 40vh;
+                grid-row: span 1;
+            }
+
+            .card-secondary {
+                grid-column: span 3;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .controls-row {
+                flex-direction: column;
+            }
+
+            .size-control {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .card-hero,
+            .card-secondary {
+                grid-column: span 12 !important;
+            }
+
+            .card-hero {
+                height: 35vh;
+                grid-row: span 1;
+            }
+
+            .control-form {
+                flex-direction: column;
+            }
+
+            .form-group {
+                width: 100%;
+            }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-primary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-secondary);
+        }
+
+        /* Loading State */
+        .loading-overlay {
+            position: absolute;
+            inset: 0;
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📺 YouTube Live Grid</h1>
+            <div class="header-stats">
+                <span class="stat-badge live">
+                    <span class="live-dot"></span>
+                    <span id="liveCount">0</span> AO VIVO
+                </span>
+                <span class="stat-badge channels">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                        <path
+                            d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z" />
+                    </svg>
+                    <span id="channelCount">15</span> CANAIS
+                </span>
+                <span class="stat-badge time">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                        <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                    </svg>
+                    <span id="updateTime">--:--</span>
+                </span>
+            </div>
+        </header>
+
+        <div class="controls-row">
+            <!-- Controle de Altura -->
+            <div class="size-control">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+                </svg>
+                <label>Altura:</label>
+                <input type="range" id="heroSizeSlider" min="25" max="70" value="50" step="5">
+                <span class="size-value" id="sizeValue">50vh</span>
+            </div>
+
+            <!-- Controle de Largura -->
+            <div class="size-control">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                </svg>
+                <label>Largura:</label>
+                <input type="range" id="heroWidthSlider" min="6" max="12" value="8" step="1">
+                <span class="size-value" id="widthValue">8 cols</span>
+            </div>
+
+            <!-- Painel de Controle -->
+            <div class="control-panel">
+                <div class="control-header">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                        <path
+                            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                    </svg>
+                    <span>Trocar Vídeo</span>
+                </div>
+                <div class="control-form">
+                    <div class="form-group">
+                        <label>Tela</label>
+                        <select id="screenSelect"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Canal Ao Vivo</label>
+                        <select id="channelSelect" onchange="document.getElementById('videoUrl').value = ''">
+                            <option value="">-- Selecione --</option>
+                        </select>
+                    </div>
+                    <div class="form-group grow">
+                        <label>Ou Cole Link do YouTube</label>
+                        <input type="text" id="videoUrl" placeholder="https://youtube.com/watch?v=..."
+                            oninput="document.getElementById('channelSelect').value = ''">
+                    </div>
+                    <button class="apply-btn" onclick="changeVideo()">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                        </svg>
+                        Aplicar
+                    </button>
+                </div>
+                <div class="feedback-message" id="feedbackMessage"></div>
+            </div>
+        </div>
+
+        <!-- Grid de Vídeos -->
+        <div class="video-grid" id="videoGrid"></div>
+    </div>
+
+    <script>
+        // ========== Estado Global ==========
+        let currentVideoIds = [];
+        let channelNames = [];
+        let muteStates = {};
+        let lockedSlots = {};
+        let activeLives = [];
+        let lastUpdate = null;
+
+        // Fallbacks caso não encontre lives
+        const FALLBACK_VIDEOS = [
+            'VayOrXlERHs',
+            'pHswEkH19uE',
+            'x4GNTjPe6_s',
+            'F7r7RvxaQv8'
+        ];
+
+        // Ícones SVG
+        const ICONS = {
+            muted: '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>',
+            unmuted: '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>',
+            lock: '<path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H8.9V6z"/>',
+            unlock: '<path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h2c0-1.66 1.34-3 3-3s3 1.34 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2z"/>'
+        };
+
+        // ========== Funções Utilitárias ==========
+        function getLayoutClass(index) {
+            if (index === 0) return 'card-hero';
+            return 'card-secondary';
+        }
+
+        function getLayoutName(index) {
+            if (index === 0) return 'PRINCIPAL';
+            return 'SECUNDÁRIA';
+        }
+
+        function formatTime(date) {
+            return date.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+        }
+
+        // ========== Buscar Atualizações ==========
+        async function checkUpdates() {
+            try {
+                const response = await fetch('lives.json?t=' + Date.now());
+                if (!response.ok) {
+                    console.error('Erro ao carregar lives.json');
+                    return;
+                }
+
+                const data = await response.json();
+
+                // Atualiza estatísticas
+                if (data.updatedAt) {
+                    lastUpdate = new Date(data.updatedAt);
+                    document.getElementById('updateTime').textContent = formatTime(lastUpdate);
+                }
+
+                if (data.activeLives) {
+                    activeLives = data.activeLives;
+                    document.getElementById('liveCount').textContent = activeLives.length;
+                    updateChannelOptions(activeLives);
+                }
+
+                if (data.allChannels) {
+                    document.getElementById('channelCount').textContent = data.allChannels.length;
+                }
+
+                // Monta lista de vídeos
+                let targetIds = [];
+                let names = [];
+
+                if (activeLives && activeLives.length > 0) {
+                    activeLives.forEach(live => {
+                        targetIds.push(live.videoId);
+                        names.push(live.name);
+                    });
+                }
+
+                // Adiciona fallbacks se necessário
+                let fallbackIdx = 0;
+                while (targetIds.length < 4) {
+                    const fallback = FALLBACK_VIDEOS[fallbackIdx++ % FALLBACK_VIDEOS.length];
+                    if (!targetIds.includes(fallback)) {
+                        targetIds.push(fallback);
+                        names.push('Fallback');
+                    }
+                }
+
+                renderGrid(targetIds, names);
+
+            } catch (error) {
+                console.error('Erro ao verificar atualizações:', error);
+            }
+        }
+
+        // ========== Renderizar Grid ==========
+        function renderGrid(newIds, names) {
+            const grid = document.getElementById('videoGrid');
+            const screenSelect = document.getElementById('screenSelect');
+
+            // Expande arrays se necessário
+            while (currentVideoIds.length < newIds.length) {
+                currentVideoIds.push('');
+                channelNames.push('');
+            }
+
+            for (let i = 0; i < newIds.length; i++) {
+                let card = document.getElementById(`card-${i}`);
+
+                // Se o slot está travado, mantém o vídeo atual
+                let finalId = lockedSlots[i] ? currentVideoIds[i] : newIds[i];
+                let finalName = lockedSlots[i] ? channelNames[i] : (names[i] || '');
+
+                if (!finalId) finalId = newIds[i];
+
+                // Cria card se não existe
+                if (!card) {
+                    card = document.createElement('div');
+                    card.id = `card-${i}`;
+                    card.className = `video-card ${getLayoutClass(i)}`;
+                    card.innerHTML = `
+                        <div class="status-badge muted" id="status-${i}">
+                            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">${ICONS.muted}</svg>
+                            MUDO
+                        </div>
+                        <div class="live-badge">
+                            <span class="dot"></span>
+                            LIVE
+                        </div>
+                        <button class="lock-btn" id="lock-${i}" onclick="toggleLock(${i})" title="Travar/Destravar">
+                            <svg viewBox="0 0 24 24">${ICONS.unlock}</svg>
+                        </button>
+                        <div class="channel-name" id="name-${i}">${finalName}</div>
+                        <div class="video-wrapper">
+                            <iframe id="player-${i}"
+                                src="https://www.youtube-nocookie.com/embed/${finalId}?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <button class="audio-control" id="audio-${i}" onclick="toggleAudio(${i})" title="Ativar/Desativar Áudio">
+                            <svg viewBox="0 0 24 24">${ICONS.muted}</svg>
+                        </button>
+                    `;
+                    grid.appendChild(card);
+                    muteStates[i] = true;
+
+                    // Adiciona opção no select
+                    const opt = document.createElement('option');
+                    opt.value = i;
+                    opt.text = `Tela ${i + 1} (${getLayoutName(i)})`;
+                    screenSelect.appendChild(opt);
+                }
+
+                // Atualiza nome do canal
+                const nameEl = document.getElementById(`name-${i}`);
+                if (nameEl) nameEl.textContent = finalName;
+
+                // Atualiza vídeo se mudou
+                if (currentVideoIds[i] !== finalId) {
+                    currentVideoIds[i] = finalId;
+                    channelNames[i] = finalName;
+
+                    const iframe = document.getElementById(`player-${i}`);
+                    if (iframe) {
+                        const mute = muteStates[i] ? '1' : '0';
+                        iframe.src = `https://www.youtube-nocookie.com/embed/${finalId}?autoplay=1&mute=${mute}&rel=0&modestbranding=1&playsinline=1`;
+                    }
+                }
+
+                // Atualiza status visual
+                updateStatusBadge(i);
+                updateLockButton(i);
+            }
+
+            // Garante que o layout esteja correto para os cards
+            const currentCols = parseInt(document.getElementById('heroWidthSlider').value);
+            updateSecondaryCardsLayout(currentCols);
+        }
+
+        // ========== Atualizar Status Badge ==========
+        function updateStatusBadge(index) {
+            const status = document.getElementById(`status-${index}`);
+            if (!status) return;
+
+            if (lockedSlots[index]) {
+                status.className = 'status-badge locked';
+                status.innerHTML = `<svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">${ICONS.lock}</svg> TRAVADO`;
+            } else {
+                const isMuted = muteStates[index];
+                status.className = isMuted ? 'status-badge muted' : 'status-badge unmuted';
+                status.innerHTML = `<svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">${isMuted ? ICONS.muted : ICONS.unmuted}</svg> ${isMuted ? 'MUDO' : 'ÁUDIO'}`;
+            }
+        }
+
+        // ========== Atualizar Botão de Lock ==========
+        function updateLockButton(index) {
+            const lockBtn = document.getElementById(`lock-${index}`);
+            if (!lockBtn) return;
+
+            if (lockedSlots[index]) {
+                lockBtn.className = 'lock-btn locked';
+                lockBtn.innerHTML = `<svg viewBox="0 0 24 24">${ICONS.lock}</svg>`;
+            } else {
+                lockBtn.className = 'lock-btn';
+                lockBtn.innerHTML = `<svg viewBox="0 0 24 24">${ICONS.unlock}</svg>`;
+            }
+        }
+
+        // ========== Toggle Áudio ==========
+        function toggleAudio(index) {
+            muteStates[index] = !muteStates[index];
+            const isMuted = muteStates[index];
+            const videoId = currentVideoIds[index];
+
+            const iframe = document.getElementById(`player-${index}`);
+            if (iframe) {
+                iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=${isMuted ? '1' : '0'}&rel=0&modestbranding=1&playsinline=1`;
+            }
+
+            const btn = document.getElementById(`audio-${index}`);
+            if (btn) {
+                btn.className = isMuted ? 'audio-control' : 'audio-control unmuted';
+                btn.innerHTML = `<svg viewBox="0 0 24 24">${isMuted ? ICONS.muted : ICONS.unmuted}</svg>`;
+            }
+
+            updateStatusBadge(index);
+        }
+
+        // ========== Toggle Lock ==========
+        function toggleLock(index) {
+            lockedSlots[index] = !lockedSlots[index];
+            updateStatusBadge(index);
+            updateLockButton(index);
+
+            if (lockedSlots[index]) {
+                showFeedback(`Tela ${index + 1} travada! Não será atualizada automaticamente.`, 'success');
+            } else {
+                showFeedback(`Tela ${index + 1} destravada! Voltará a atualizar.`, 'success');
+            }
+        }
+
+        // ========== Atualizar Opções de Canal ==========
+        function updateChannelOptions(lives) {
+            const select = document.getElementById('channelSelect');
+            let html = '<option value="">-- Selecione Canal Ao Vivo --</option>';
+
+            lives.forEach(ch => {
+                html += `<option value="${ch.videoId}" data-name="${ch.name}">${ch.name}</option>`;
+            });
+
+            select.innerHTML = html;
+        }
+
+        // ========== Trocar Vídeo ==========
+        function changeVideo() {
+            const screenIdx = parseInt(document.getElementById('screenSelect').value);
+            const channelSelect = document.getElementById('channelSelect');
+            const urlInput = document.getElementById('videoUrl');
+
+            let newId = channelSelect.value;
+            let newName = channelSelect.options[channelSelect.selectedIndex]?.dataset?.name || '';
+
+            // Se não selecionou canal, tenta extrair do URL
+            if (!newId) {
+                const url = urlInput.value.trim();
+                const match = url.match(/(?:v=|youtu\.be\/|\/embed\/)([\w-]{11})/);
+                if (match) {
+                    newId = match[1];
+                    newName = 'Manual';
+                }
+            }
+
+            if (!newId) {
+                showFeedback('⚠️ Selecione um canal ou cole um link válido', 'error');
+                return;
+            }
+
+            // Trava o slot e atualiza
+            lockedSlots[screenIdx] = true;
+            currentVideoIds[screenIdx] = newId;
+            channelNames[screenIdx] = newName;
+
+            const iframe = document.getElementById(`player-${screenIdx}`);
+            if (iframe) {
+                const mute = muteStates[screenIdx] ? '1' : '0';
+                iframe.src = `https://www.youtube-nocookie.com/embed/${newId}?autoplay=1&mute=${mute}&rel=0&modestbranding=1&playsinline=1`;
+            }
+
+            const nameEl = document.getElementById(`name-${screenIdx}`);
+            if (nameEl) nameEl.textContent = newName;
+
+            updateStatusBadge(screenIdx);
+            updateLockButton(screenIdx);
+
+            showFeedback(`✅ Tela ${screenIdx + 1} atualizada e travada!`, 'success');
+
+            // Limpa inputs
+            urlInput.value = '';
+            channelSelect.value = '';
+        }
+
+        // ========== Mostrar Feedback ==========
+        function showFeedback(msg, type) {
+            const el = document.getElementById('feedbackMessage');
+            el.textContent = msg;
+            el.className = `feedback-message ${type}`;
+
+            setTimeout(() => {
+                el.className = 'feedback-message';
+            }, 4000);
+        }
+
+        // ========== Trocar Tela com Hero (Option + Clique Direito) ==========
+        function swapWithHero(secondaryIndex) {
+            if (secondaryIndex === 0) return; // Não trocar hero consigo mesmo
+
+            // Salvar dados da tela hero (índice 0)
+            const heroVideoId = currentVideoIds[0];
+            const heroChannelName = channelNames[0];
+            const heroMuteState = muteStates[0];
+            const heroLockState = lockedSlots[0];
+
+            // Salvar dados da tela secundária
+            const secondaryVideoId = currentVideoIds[secondaryIndex];
+            const secondaryChannelName = channelNames[secondaryIndex];
+            const secondaryMuteState = muteStates[secondaryIndex];
+            const secondaryLockState = lockedSlots[secondaryIndex];
+
+            // Trocar os dados
+            currentVideoIds[0] = secondaryVideoId;
+            channelNames[0] = secondaryChannelName;
+            muteStates[0] = secondaryMuteState;
+            lockedSlots[0] = secondaryLockState;
+
+            currentVideoIds[secondaryIndex] = heroVideoId;
+            channelNames[secondaryIndex] = heroChannelName;
+            muteStates[secondaryIndex] = heroMuteState;
+            lockedSlots[secondaryIndex] = heroLockState;
+
+            // Atualizar iframes
+            const heroIframe = document.getElementById('player-0');
+            const secondaryIframe = document.getElementById(`player-${secondaryIndex}`);
+
+            if (heroIframe) {
+                const mute = muteStates[0] ? '1' : '0';
+                heroIframe.src = `https://www.youtube-nocookie.com/embed/${currentVideoIds[0]}?autoplay=1&mute=${mute}&rel=0&modestbranding=1&playsinline=1`;
+            }
+
+            if (secondaryIframe) {
+                const mute = muteStates[secondaryIndex] ? '1' : '0';
+                secondaryIframe.src = `https://www.youtube-nocookie.com/embed/${currentVideoIds[secondaryIndex]}?autoplay=1&mute=${mute}&rel=0&modestbranding=1&playsinline=1`;
+            }
+
+            // Atualizar nomes dos canais
+            const heroName = document.getElementById('name-0');
+            const secondaryName = document.getElementById(`name-${secondaryIndex}`);
+            if (heroName) heroName.textContent = channelNames[0];
+            if (secondaryName) secondaryName.textContent = channelNames[secondaryIndex];
+
+            // Atualizar botões de áudio
+            const heroAudioBtn = document.getElementById('audio-0');
+            const secondaryAudioBtn = document.getElementById(`audio-${secondaryIndex}`);
+
+            if (heroAudioBtn) {
+                heroAudioBtn.className = muteStates[0] ? 'audio-control' : 'audio-control unmuted';
+                heroAudioBtn.innerHTML = `<svg viewBox="0 0 24 24">${muteStates[0] ? ICONS.muted : ICONS.unmuted}</svg>`;
+            }
+
+            if (secondaryAudioBtn) {
+                secondaryAudioBtn.className = muteStates[secondaryIndex] ? 'audio-control' : 'audio-control unmuted';
+                secondaryAudioBtn.innerHTML = `<svg viewBox="0 0 24 24">${muteStates[secondaryIndex] ? ICONS.muted : ICONS.unmuted}</svg>`;
+            }
+
+            // Atualizar status badges e botões de lock
+            updateStatusBadge(0);
+            updateStatusBadge(secondaryIndex);
+            updateLockButton(0);
+            updateLockButton(secondaryIndex);
+
+            showFeedback(`🔄 Tela ${secondaryIndex + 1} trocada com a Principal!`, 'success');
+        }
+
+        // Event Listener para Option + Clique Direito nas telas secundárias
+        document.addEventListener('contextmenu', (e) => {
+            // Verificar se Option (Alt) está pressionado
+            if (!e.altKey) return;
+
+            // Encontrar o card clicado
+            const card = e.target.closest('.video-card');
+            if (!card) return;
+
+            // Extrair o índice do card
+            const cardId = card.id; // formato: card-X
+            const match = cardId.match(/card-(\d+)/);
+            if (!match) return;
+
+            const index = parseInt(match[1]);
+
+            // Só trocar se for tela secundária (não o hero)
+            if (index === 0) return;
+
+            // Prevenir menu de contexto padrão
+            e.preventDefault();
+
+            // Executar a troca
+            swapWithHero(index);
+        });
+
+        // ========== Event Listeners ==========
+
+        // Slider de altura
+        document.getElementById('heroSizeSlider').addEventListener('input', (e) => {
+            const val = e.target.value;
+            document.documentElement.style.setProperty('--hero-height', `${val}vh`);
+            document.getElementById('sizeValue').textContent = `${val}vh`;
+            updateHeroGridRows();
+        });
+
+        // Slider de largura
+        document.getElementById('heroWidthSlider').addEventListener('input', (e) => {
+            const cols = parseInt(e.target.value);
+            document.documentElement.style.setProperty('--hero-columns', cols);
+            document.getElementById('widthValue').textContent = `${cols} cols`;
+            updateHeroGridRows();
+            updateSecondaryCardsLayout(cols);
+        });
+
+        // Atualiza quantas linhas o hero ocupa com base na largura
+        function updateHeroGridRows() {
+            const heroCard = document.getElementById('card-0');
+            if (!heroCard) return;
+
+            const cols = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--hero-columns')) || 8;
+
+            // Se hero ocupa menos que 12 colunas, precisa de mais linhas para comportar as telas laterais
+            if (cols < 12) {
+                heroCard.style.gridRow = 'span 2';
+            } else {
+                heroCard.style.gridRow = 'span 1';
+            }
+        }
+
+        // Atualiza layout das cards secundárias com base na largura do hero
+        function updateSecondaryCardsLayout(cols) {
+            const secondaryCards = document.querySelectorAll('.card-secondary');
+            const remainingCols = 12 - cols;
+
+            secondaryCards.forEach((card, index) => {
+                // Se o hero não ocupa tudo, as 2 primeiras secundárias ficam na lateral
+                if (cols < 12 && index < 2) {
+                    card.style.gridColumn = `span ${remainingCols}`;
+                    card.style.aspectRatio = 'unset';
+                    // Altura = metade do hero menos o gap
+                    card.style.height = 'calc((var(--hero-height) - 12px) / 2)';
+                } else {
+                    // Cards normais (abaixo ou quando hero é full)
+                    card.style.gridColumn = 'span 3';
+                    card.style.aspectRatio = '16/9';
+                    card.style.height = 'auto';
+                }
+            });
+        }
+
+        // Enter no input de URL
+        document.getElementById('videoUrl').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') changeVideo();
+        });
+
+        // ========== Inicialização ==========
+        console.log('🚀 YouTube Live Grid iniciado...');
+        checkUpdates();
+
+        // Atualiza a cada 15 segundos
+        setInterval(checkUpdates, 15000);
+
+        // Atualiza relógio do header
+        setInterval(() => {
+            if (lastUpdate) {
+                document.getElementById('updateTime').textContent = formatTime(lastUpdate);
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

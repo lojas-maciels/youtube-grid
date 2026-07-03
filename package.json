@@ -1,0 +1,17 @@
+{
+  "name": "youtube-grid",
+  "version": "1.0.0",
+  "description": "Grid de transmissões ao vivo do YouTube",
+  "main": "find-lives.js",
+  "scripts": {
+    "start": "node find-lives.js && python3 -m http.server 8080",
+    "find-lives": "node find-lives.js",
+    "serve": "python3 -m http.server 8080"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^21.0.0",
+    "rss-parser": "^3.13.0"
+  }
+}
