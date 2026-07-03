@@ -1,41 +1,36 @@
 {
-  "updatedAt": "2026-07-03T18:00:56.918Z",
+  "updatedAt": "2026-07-03T18:07:50.354Z",
   "videos": [
-    "YppdsVN5N_A",
-    "edRiX4Otdaw",
-    "XJn-gBhPzLs",
-    "PZ8Ftah0LdA"
+    "XU22_isH_lw",
+    "N_yB0JjigHk",
+    "gVdfcAMPO4s",
+    "M7zNRqiM5Cg"
   ],
   "activeLives": [
     {
       "name": "CNN Brasil",
-      "videoId": "YppdsVN5N_A",
-      "title": "AO VIVO: CNN 360º - 03/07/2026"
+      "videoId": "XU22_isH_lw",
+      "title": "Live Stream"
     },
     {
       "name": "Revista Oeste",
-      "videoId": "edRiX4Otdaw",
-      "title": "FAROESTE À BRASILEIRA, COM GUSTAVO SEGRÉ | 03/07/26"
+      "videoId": "N_yB0JjigHk",
+      "title": "Live Stream"
     },
     {
       "name": "Gazeta do Povo",
-      "videoId": "XJn-gBhPzLs",
-      "title": "🔴O cerco de Trump aumentou: Magnitsky agora mira Gilmar Mendes e família de Moraes | SEM RODEIOS"
-    },
-    {
-      "name": "BandNews FM",
-      "videoId": "PZ8Ftah0LdA",
-      "title": "🔴[AO VIVO] Austrália x Egito | Copa Do Mundo Fifa 2026 | 03/07/2026"
+      "videoId": "gVdfcAMPO4s",
+      "title": "Live Stream"
     },
     {
       "name": "Record News",
-      "videoId": "XL_WqF1F4dA",
-      "title": "Conexão Record News - 03/07/2026"
+      "videoId": "M7zNRqiM5Cg",
+      "title": "Live Stream"
     },
     {
       "name": "Jovem Pan News",
-      "videoId": "qkCD7tL269Y",
-      "title": "TEMPO REAL - 03/07/26"
+      "videoId": "EcOn0udRj1I",
+      "title": "Live Stream"
     },
     {
       "name": "UOL",
@@ -44,8 +39,8 @@
     },
     {
       "name": "SBT News",
-      "videoId": "R6t6jxJ4J1M",
-      "title": "🔴 AO VIVO: CENTRAL, com Eduardo Gayer | SBT News | 03/07/2026"
+      "videoId": "FPP54kMvvhU",
+      "title": "Live Stream"
     },
     {
       "name": "GloboNews",
@@ -53,19 +48,14 @@
       "title": "Andréia Sadi entrevista o ex-árbitro de futebol e comentarista Arnaldo Cezar Coelho"
     },
     {
-      "name": "Band Jornalismo",
-      "videoId": "fgXNWJMUggg",
-      "title": "[AO VIVO] JORNAL DA NOITE  - 03/07/2026"
-    },
-    {
       "name": "RedeTV News",
-      "videoId": "Xl_7nMeXxxI",
-      "title": "[AO VIVO]  REDETV! NOTÍCIAS - 2ª EDIÇÃO | 03/07/2026"
+      "videoId": "mZ2SdYayblM",
+      "title": "Live Stream"
     },
     {
       "name": "TV Cultura",
-      "videoId": "ELLZkFzkx1A",
-      "title": "SERÁ QUE TEREMOS NOVIDADES NA TOKU-FRIDAY? | ANTIMATÉRIA - ENERGIA GEEK | 03/07/2026"
+      "videoId": "B3yDJuXcgJo",
+      "title": "BEM BRASIL | NAÇÃO ZUMBI | 05/07/26"
     },
     {
       "name": "TV Brasil",
