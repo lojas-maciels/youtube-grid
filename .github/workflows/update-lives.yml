@@ -1,9 +1,6 @@
 name: Update YouTube Live Grid
 
 on:
-  schedule:
-    # Roda a cada 10 minutos (limite seguro e gratuito do GitHub Actions)
-    - cron: '*/10 * * * *'
   workflow_dispatch: # Permite rodar manualmente pelo painel do GitHub
   push:
     branches:

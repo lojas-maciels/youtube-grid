@@ -201,6 +201,19 @@ async function updateData() {
 
     fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
     console.log(`💾 JSON salvo. ${activeLives.length} transmissões ativas.`);
+
+    // Envia automaticamente para o GitHub Pages se estiver rodando localmente
+    if (process.env.GITHUB_ACTIONS !== 'true') {
+        const { exec } = require('child_process');
+        console.log('📤 Enviando atualização de lives para o GitHub...');
+        exec('git add lives.json && git commit -m "chore: update lives.json [skip ci]" && git push', { cwd: __dirname }, (error, stdout, stderr) => {
+            if (error) {
+                console.error(`❌ Erro ao enviar para o GitHub: ${error.message}`);
+                return;
+            }
+            console.log('✅ GitHub atualizado com sucesso!');
+        });
+    }
 }
 
 console.log('📡 Monitor de Lives iniciado (versão Otimizada)...');
