@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-04T03:19:13.644Z",
+  "updatedAt": "2026-07-04T03:19:17.705Z",
   "videos": [
     "5_KTBWFHZ5o",
     "5L2mbY0C6fw",
-    "hvupKh2J9VE",
-    "KMtS9kMYRTE"
+    "fg1MKFC8b_I",
+    "hvupKh2J9VE"
   ],
   "activeLives": [
     {
@@ -16,6 +16,11 @@
       "name": "Revista Oeste",
       "videoId": "5L2mbY0C6fw",
       "title": "COPA SEM FIRULA, COM MILTON NEVES | 04/07/26"
+    },
+    {
+      "name": "Gazeta do Povo",
+      "videoId": "fg1MKFC8b_I",
+      "title": "NOTÍCIAS DA MANHÃ: 06/07/26 | CAFÉ COM A GAZETA DO POVO"
     },
     {
       "name": "BandNews FM",
