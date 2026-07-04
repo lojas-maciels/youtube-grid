@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-04T11:06:41.719Z",
+  "updatedAt": "2026-07-04T11:06:47.310Z",
   "videos": [
     "_rC_-V1AXEM",
     "5L2mbY0C6fw",
-    "fg1MKFC8b_I",
+    "-1WX_O66dnM",
     "KMtS9kMYRTE"
   ],
   "activeLives": [
@@ -18,9 +18,9 @@
       "title": "COPA SEM FIRULA, COM MILTON NEVES | 04/07/26"
     },
     {
-      "name": "Gazeta do Povo",
-      "videoId": "fg1MKFC8b_I",
-      "title": "NOTÍCIAS DA MANHÃ: 06/07/26 | CAFÉ COM A GAZETA DO POVO"
+      "name": "BandNews FM",
+      "videoId": "-1WX_O66dnM",
+      "title": "🔴[AO VIVO] Fórmula 1 | Sprint Inglaterra - | 04/07/2026"
     },
     {
       "name": "Record News",
@@ -33,9 +33,19 @@
       "title": "JORNAL DA MANHÃ -  04/07/2026"
     },
     {
+      "name": "SBT News",
+      "videoId": "4n9NtbGDh-4",
+      "title": "NEWS SÁBADO (1ª EDIÇÃO) | 04/07/2026"
+    },
+    {
       "name": "GloboNews",
       "videoId": "ZE2nT3PWveA",
       "title": "Andréia Sadi entrevista o ex-árbitro de futebol e comentarista Arnaldo Cezar Coelho"
+    },
+    {
+      "name": "Band Jornalismo",
+      "videoId": "iw3kK0dG9iA",
+      "title": "DOCUMENTO BAND: INDENPENDÊNCIA DA BAHIA"
     },
     {
       "name": "TV Cultura",
