@@ -1,26 +1,21 @@
 {
-  "updatedAt": "2026-07-04T17:21:21.071Z",
+  "updatedAt": "2026-07-04T17:53:11.384Z",
   "videos": [
-    "frcLe-dzuog",
+    "mAOgbluw3sk",
     "zCsQ8V5hSpM",
-    "fg1MKFC8b_I",
-    "uI5yqiJjO54"
+    "uI5yqiJjO54",
+    "KMtS9kMYRTE"
   ],
   "activeLives": [
     {
       "name": "CNN Brasil",
-      "videoId": "frcLe-dzuog",
-      "title": "AO VIVO: WW Edição Especial - 04/07/2026"
+      "videoId": "mAOgbluw3sk",
+      "title": "AO VIVO: Cartagena: História, cultura e gastronomia | CNN Viagem &amp; Gastronomia"
     },
     {
       "name": "Revista Oeste",
       "videoId": "zCsQ8V5hSpM",
       "title": "OUTRA COISA, COM GUILHERME FIUZA | 04/07/26"
-    },
-    {
-      "name": "Gazeta do Povo",
-      "videoId": "fg1MKFC8b_I",
-      "title": "NOTÍCIAS DA MANHÃ: 06/07/26 | CAFÉ COM A GAZETA DO POVO"
     },
     {
       "name": "BandNews FM",
