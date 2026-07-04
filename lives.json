@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T06:39:53.358Z",
+  "updatedAt": "2026-07-04T07:14:09.843Z",
   "videos": [
     "5_KTBWFHZ5o",
     "5L2mbY0C6fw",
@@ -28,11 +28,6 @@
       "title": "BandNews FM | Sábado - 04/07/2026"
     },
     {
-      "name": "Record News",
-      "videoId": "KMtS9kMYRTE",
-      "title": "AO VIVO: Acompanhe as principais notícias do dia na Record News"
-    },
-    {
       "name": "Jovem Pan News",
       "videoId": "eTz4XgOQaAE",
       "title": "Jovem Pan News Av. Paulista"
@@ -56,6 +51,11 @@
       "name": "TV Cultura",
       "videoId": "B3yDJuXcgJo",
       "title": "BEM BRASIL | NAÇÃO ZUMBI | 05/07/26"
+    },
+    {
+      "name": "TV Brasil",
+      "videoId": "CeAs-UyP85M",
+      "title": "Repórter Brasil, 04/07/2026"
     }
   ],
   "allChannels": [
