@@ -1,12 +1,17 @@
 {
-  "updatedAt": "2026-07-04T17:21:19.296Z",
+  "updatedAt": "2026-07-04T17:21:21.071Z",
   "videos": [
+    "frcLe-dzuog",
     "zCsQ8V5hSpM",
     "fg1MKFC8b_I",
-    "uI5yqiJjO54",
-    "KMtS9kMYRTE"
+    "uI5yqiJjO54"
   ],
   "activeLives": [
+    {
+      "name": "CNN Brasil",
+      "videoId": "frcLe-dzuog",
+      "title": "AO VIVO: WW Edição Especial - 04/07/2026"
+    },
     {
       "name": "Revista Oeste",
       "videoId": "zCsQ8V5hSpM",
