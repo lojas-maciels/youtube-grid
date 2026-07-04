@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-04T04:08:05.607Z",
+  "updatedAt": "2026-07-04T04:08:11.413Z",
   "videos": [
     "5_KTBWFHZ5o",
     "5L2mbY0C6fw",
     "fg1MKFC8b_I",
-    "KMtS9kMYRTE"
+    "hvupKh2J9VE"
   ],
   "activeLives": [
     {
@@ -21,6 +21,11 @@
       "name": "Gazeta do Povo",
       "videoId": "fg1MKFC8b_I",
       "title": "NOTÍCIAS DA MANHÃ: 06/07/26 | CAFÉ COM A GAZETA DO POVO"
+    },
+    {
+      "name": "BandNews FM",
+      "videoId": "hvupKh2J9VE",
+      "title": "Colômbia x Gana | Copa Do Mundo Fifa 2026 | 03/07/2026"
     },
     {
       "name": "Record News",
