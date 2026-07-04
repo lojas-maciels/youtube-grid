@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-04T09:15:20.484Z",
+  "updatedAt": "2026-07-04T10:34:17.560Z",
   "videos": [
     "_rC_-V1AXEM",
     "5L2mbY0C6fw",
     "fg1MKFC8b_I",
-    "I3JI82E2Z-Q"
+    "KMtS9kMYRTE"
   ],
   "activeLives": [
     {
@@ -23,11 +23,6 @@
       "title": "NOTÍCIAS DA MANHÃ: 06/07/26 | CAFÉ COM A GAZETA DO POVO"
     },
     {
-      "name": "BandNews FM",
-      "videoId": "I3JI82E2Z-Q",
-      "title": "🔴[AO VIVO] BandNews FM | Sábado - 04/07/2026"
-    },
-    {
       "name": "Record News",
       "videoId": "KMtS9kMYRTE",
       "title": "AO VIVO: Acompanhe as principais notícias do dia na Record News"
@@ -38,24 +33,9 @@
       "title": "JORNAL DA MANHÃ -  04/07/2026"
     },
     {
-      "name": "SBT News",
-      "videoId": "ZldLpXBbfSc",
-      "title": "SBT NEWS AO VIVO"
-    },
-    {
       "name": "GloboNews",
       "videoId": "ZE2nT3PWveA",
       "title": "Andréia Sadi entrevista o ex-árbitro de futebol e comentarista Arnaldo Cezar Coelho"
-    },
-    {
-      "name": "Band Jornalismo",
-      "videoId": "iw3kK0dG9iA",
-      "title": "DOCUMENTO BAND: INDENPENDÊNCIA DA BAHIA"
-    },
-    {
-      "name": "TV Cultura",
-      "videoId": "B3yDJuXcgJo",
-      "title": "BEM BRASIL | NAÇÃO ZUMBI | 05/07/26"
     },
     {
       "name": "TV Brasil",
