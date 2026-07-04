@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-07-04T02:18:14.137Z",
+  "updatedAt": "2026-07-04T03:19:04.234Z",
   "videos": [
-    "FgsRn7wTyXo",
+    "5_KTBWFHZ5o",
     "5L2mbY0C6fw",
     "fg1MKFC8b_I",
-    "hvupKh2J9VE"
+    "CmDfGlLdwL8"
   ],
   "activeLives": [
     {
       "name": "CNN Brasil",
-      "videoId": "FgsRn7wTyXo",
-      "title": "AO VIVO: O GRANDE DEBATE - 03/07/2026"
+      "videoId": "5_KTBWFHZ5o",
+      "title": "AO VIVO: CNN MADRUGADA - 04/07/2026"
     },
     {
       "name": "Revista Oeste",
@@ -23,11 +23,6 @@
       "title": "NOTÍCIAS DA MANHÃ: 06/07/26 | CAFÉ COM A GAZETA DO POVO"
     },
     {
-      "name": "BandNews FM",
-      "videoId": "hvupKh2J9VE",
-      "title": "🔴[AO VIVO] Colômbia x Gana | Copa Do Mundo Fifa 2026 | 03/07/2026"
-    },
-    {
       "name": "Record News",
       "videoId": "CmDfGlLdwL8",
       "title": "AO VIVO: Acompanhe as principais notícias do dia na Record News"
@@ -38,19 +33,9 @@
       "title": "Colômbia x Gana - AO VIVO - 03/07/2026 - Copa do Mundo"
     },
     {
-      "name": "SBT News",
-      "videoId": "tdYAxZCFLg8",
-      "title": "TRIBUNA DO VOTO | 03/07/2026"
-    },
-    {
       "name": "GloboNews",
       "videoId": "ZE2nT3PWveA",
       "title": "Andréia Sadi entrevista o ex-árbitro de futebol e comentarista Arnaldo Cezar Coelho"
-    },
-    {
-      "name": "Band Jornalismo",
-      "videoId": "fgXNWJMUggg",
-      "title": "[AO VIVO] JORNAL DA NOITE  - 03/07/2026"
     },
     {
       "name": "TV Cultura",
