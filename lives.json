@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-04T18:22:37.134Z",
+  "updatedAt": "2026-07-04T18:22:42.902Z",
   "videos": [
     "mAOgbluw3sk",
     "zCsQ8V5hSpM",
-    "uI5yqiJjO54",
-    "KMtS9kMYRTE"
+    "fg1MKFC8b_I",
+    "uI5yqiJjO54"
   ],
   "activeLives": [
     {
@@ -16,6 +16,11 @@
       "name": "Revista Oeste",
       "videoId": "zCsQ8V5hSpM",
       "title": "OUTRA COISA, COM GUILHERME FIUZA | 04/07/26"
+    },
+    {
+      "name": "Gazeta do Povo",
+      "videoId": "fg1MKFC8b_I",
+      "title": "NOTÍCIAS DA MANHÃ: 06/07/26 | CAFÉ COM A GAZETA DO POVO"
     },
     {
       "name": "BandNews FM",
