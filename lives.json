@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T07:14:09.843Z",
+  "updatedAt": "2026-07-04T07:14:31.857Z",
   "videos": [
     "5_KTBWFHZ5o",
     "5L2mbY0C6fw",
@@ -26,6 +26,11 @@
       "name": "BandNews FM",
       "videoId": "I3JI82E2Z-Q",
       "title": "BandNews FM | Sábado - 04/07/2026"
+    },
+    {
+      "name": "Record News",
+      "videoId": "KMtS9kMYRTE",
+      "title": "AO VIVO: Acompanhe as principais notícias do dia na Record News"
     },
     {
       "name": "Jovem Pan News",
