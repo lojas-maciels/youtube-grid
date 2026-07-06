@@ -1,68 +1,12 @@
 {
-  "updatedAt": "2026-07-04T22:04:45.044Z",
+  "updatedAt": "2026-07-06T20:18:41.352Z",
   "videos": [
-    "wcSRzqIpnlM",
-    "zCsQ8V5hSpM",
-    "fg1MKFC8b_I",
-    "2oDb7SkG6oU"
+    "6N3JR_LupSM",
+    "VayOrXlERHs",
+    "pHswEkH19uE",
+    "x4GNTjPe6_s"
   ],
-  "activeLives": [
-    {
-      "name": "CNN Brasil",
-      "videoId": "wcSRzqIpnlM",
-      "title": "AO VIVO: AGORA CNN NOITE - 04/07/2026"
-    },
-    {
-      "name": "Revista Oeste",
-      "videoId": "zCsQ8V5hSpM",
-      "title": "OUTRA COISA, COM GUILHERME FIUZA | 04/07/26"
-    },
-    {
-      "name": "Gazeta do Povo",
-      "videoId": "fg1MKFC8b_I",
-      "title": "NOTÍCIAS DA MANHÃ: 06/07/26 | CAFÉ COM A GAZETA DO POVO"
-    },
-    {
-      "name": "BandNews FM",
-      "videoId": "2oDb7SkG6oU",
-      "title": "🔴[AO VIVO] Paraguai x França | Copa Do Mundo Fifa 2026 | 04/07/2026"
-    },
-    {
-      "name": "Record News",
-      "videoId": "KMtS9kMYRTE",
-      "title": "AO VIVO: Acompanhe as principais notícias do dia na Record News"
-    },
-    {
-      "name": "Jovem Pan News",
-      "videoId": "qP1vxrh0Zvg",
-      "title": "JORNAL JOVEM PAN - 04/07/2026"
-    },
-    {
-      "name": "SBT News",
-      "videoId": "ENfRYHTb0LQ",
-      "title": "JORNAL DO SBT NEWS | 04/07/2026"
-    },
-    {
-      "name": "GloboNews",
-      "videoId": "ZE2nT3PWveA",
-      "title": "Andréia Sadi entrevista o ex-árbitro de futebol e comentarista Arnaldo Cezar Coelho"
-    },
-    {
-      "name": "Band Jornalismo",
-      "videoId": "iw3kK0dG9iA",
-      "title": "DOCUMENTO BAND: INDENPENDÊNCIA DA BAHIA"
-    },
-    {
-      "name": "TV Cultura",
-      "videoId": "B3yDJuXcgJo",
-      "title": "BEM BRASIL | NAÇÃO ZUMBI | 05/07/26"
-    },
-    {
-      "name": "TV Brasil",
-      "videoId": "CeAs-UyP85M",
-      "title": "Repórter Brasil, 04/07/2026"
-    }
-  ],
+  "activeLives": [],
   "allChannels": [
     {
       "name": "CNN Brasil",
