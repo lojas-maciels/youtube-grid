@@ -1,12 +1,78 @@
 {
-  "updatedAt": "2026-07-06T20:18:41.352Z",
+  "updatedAt": "2026-07-06T20:23:55.587Z",
   "videos": [
-    "6N3JR_LupSM",
-    "VayOrXlERHs",
-    "pHswEkH19uE",
-    "x4GNTjPe6_s"
+    "JtY2cNsl-cs",
+    "gxHA68Pmcfo",
+    "6syRMjoVsJg",
+    "vSHh0Kv-qpQ"
   ],
-  "activeLives": [],
+  "activeLives": [
+    {
+      "name": "CNN Brasil",
+      "videoId": "JtY2cNsl-cs",
+      "title": "AO VIVO: CNN 360º - 06/07/2026"
+    },
+    {
+      "name": "Revista Oeste",
+      "videoId": "gxHA68Pmcfo",
+      "title": "JORNAL DA OESTE SEGUNDA EDIÇÃO, COM GEISIANE FREITAS | 06/07/2026"
+    },
+    {
+      "name": "Gazeta do Povo",
+      "videoId": "6syRMjoVsJg",
+      "title": "🔴Diplomatas temem força militar dos EUA contra o PCC e CV no país | JORNAL GAZETA AGORA"
+    },
+    {
+      "name": "BandNews FM",
+      "videoId": "vSHh0Kv-qpQ",
+      "title": "🔴[AO VIVO] Portugal x Espanha | Copa Do Mundo Fifa 2026 | 06/07/2026"
+    },
+    {
+      "name": "Record News",
+      "videoId": "ZN5MF_uB03Q",
+      "title": "Link News - 06/07/2026"
+    },
+    {
+      "name": "Jovem Pan News",
+      "videoId": "hIVWnHv_5kE",
+      "title": "SELEÇÃO BRASILEIRA ESTÁ ELIMINADA DA COPA! GOL E PÊNALTI PERDIDOS MUDARIAM A HISTÓRIA? | PAN NA ÁREA"
+    },
+    {
+      "name": "UOL",
+      "videoId": "MVYiVLH2fb0",
+      "title": "Daniela Lima e Fernando Canzian entrevistam Michel Temer no Frente a Frente ao vivo | 6/7/2026"
+    },
+    {
+      "name": "SBT News",
+      "videoId": "UDeRWfpAfAs",
+      "title": "🔴 AO VIVO: PODER EXPRESSO, com Raquel Landim | 06/07/2026 | SBT News"
+    },
+    {
+      "name": "GloboNews",
+      "videoId": "ZE2nT3PWveA",
+      "title": "Andréia Sadi entrevista o ex-árbitro de futebol e comentarista Arnaldo Cézar Coelho"
+    },
+    {
+      "name": "Band Jornalismo",
+      "videoId": "edHG_hJZl58",
+      "title": "[AO VIVO] JORNAL DA BAND - 06/07/2026"
+    },
+    {
+      "name": "RedeTV News",
+      "videoId": "sXda2ZziKCw",
+      "title": "[AO VIVO]  REDETV! NOTÍCIAS - 2ª EDIÇÃO | 06/07/2026"
+    },
+    {
+      "name": "TV Cultura",
+      "videoId": "-xkq2n33n5U",
+      "title": "JOGAMOS COM O MAGNETO, O QUE ACHAMOS? | ANTIMATÉRIA - ENERGIA GEEK | 06/07/2026"
+    },
+    {
+      "name": "TV Brasil",
+      "videoId": "RHXb-JZYhJE",
+      "title": "Repórter Brasil, 06/07/2026"
+    }
+  ],
   "allChannels": [
     {
       "name": "CNN Brasil",
