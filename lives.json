@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T22:58:41.691Z",
+  "updatedAt": "2026-07-06T23:02:09.864Z",
   "videos": [
     "eIFXVFQDXac",
     "QcULrgYoSQk",
@@ -34,13 +34,8 @@
     },
     {
       "name": "Jovem Pan News",
-      "videoId": "fQ6f71Fx_xY",
-      "title": "EUA x Bélgica - AO VIVO - 06/07/2026 - Copa do Mundo"
-    },
-    {
-      "name": "UOL",
-      "videoId": "MVYiVLH2fb0",
-      "title": "Dani Lima e Canzian entrevistam Michel Temer sobre relação com Lula e Dilma, Bolsonaro, Master e+"
+      "videoId": "bsnLb_tKANI",
+      "title": "JORNAL JOVEM PAN - 06/07/2026"
     },
     {
       "name": "SBT News",
@@ -50,7 +45,12 @@
     {
       "name": "GloboNews",
       "videoId": "ZE2nT3PWveA",
-      "title": "Andréia Sadi entrevista o ex-árbitro de futebol e comentarista Arnaldo Cezar Coelho"
+      "title": "AO VIVO • Andréia Sadi entrevista o ex-árbitro de futebol e comentarista Arnaldo Cezar Coelho"
+    },
+    {
+      "name": "Band Jornalismo",
+      "videoId": "edHG_hJZl58",
+      "title": "Trump admite intervenção para anular expulsão de jogador | JORNAL DA BAND [AO VIVO] - 06/07/2026"
     },
     {
       "name": "RedeTV News",
@@ -58,14 +58,9 @@
       "title": "[AO VIVO]  REDETV! NOTÍCIAS - 1ª EDIÇÃO | 07/07/2026"
     },
     {
-      "name": "TV Cultura",
-      "videoId": "-xkq2n33n5U",
-      "title": "JOGAMOS COM O MAGNETO, O QUE ACHAMOS? | ANTIMATÉRIA - ENERGIA GEEK | 06/07/2026"
-    },
-    {
       "name": "TV Brasil",
-      "videoId": "RHXb-JZYhJE",
-      "title": "Repórter Brasil, 06/07/2026"
+      "videoId": "pOuOLEii9Bs",
+      "title": "Repórter Brasil, 07/07/2026"
     }
   ],
   "allChannels": [
