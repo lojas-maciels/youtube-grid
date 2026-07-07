@@ -1,12 +1,73 @@
 {
-  "updatedAt": "2026-07-07T20:30:54.484Z",
+  "updatedAt": "2026-07-07T22:23:53.147Z",
   "videos": [
-    "6N3JR_LupSM",
-    "VayOrXlERHs",
-    "pHswEkH19uE",
-    "x4GNTjPe6_s"
+    "7ef9lxknJLM",
+    "2NB5cMzhV-I",
+    "ycMFQSimfuA",
+    "EE1DjTbbTi8"
   ],
-  "activeLives": [],
+  "activeLives": [
+    {
+      "name": "CNN Brasil",
+      "videoId": "7ef9lxknJLM",
+      "title": "AO VIVO: HORA H - 07/07/2026"
+    },
+    {
+      "name": "Revista Oeste",
+      "videoId": "2NB5cMzhV-I",
+      "title": "OESTE SEM FILTRO | 07/07/26"
+    },
+    {
+      "name": "Gazeta do Povo",
+      "videoId": "ycMFQSimfuA",
+      "title": "Enquanto Flávio é investigado por opinião, ministro de Lula manda desobedecer regras| ÚLTIMA ANÁLISE"
+    },
+    {
+      "name": "BandNews FM",
+      "videoId": "EE1DjTbbTi8",
+      "title": "[AO VIVO] O É da Coisa de 07/07/2026, com Reinaldo Azevedo"
+    },
+    {
+      "name": "Record News",
+      "videoId": "0b3h6lz6SMo",
+      "title": "News 19 Horas - 07/07/2026"
+    },
+    {
+      "name": "Jovem Pan News",
+      "videoId": "o--NKgVK7fY",
+      "title": "OS PINGOS NOS IS - 07/07/2026"
+    },
+    {
+      "name": "UOL",
+      "videoId": "BKZvVDKvNqc",
+      "title": "Rosana Argenta, das clínicas Saúde Livre, no Divã de CNPJ"
+    },
+    {
+      "name": "SBT News",
+      "videoId": "MusAPfRjLM4",
+      "title": "🔴 AO VIVO:  JORNAL DO SBT NEWS, com Celso Freitas e Marina Demori | #SBTNews"
+    },
+    {
+      "name": "Band Jornalismo",
+      "videoId": "5UlDo3D_egM",
+      "title": "Jornal da Band visita prisão onde estão os criminosos mais perigosos | [AO VIVO] - 07/07/2026"
+    },
+    {
+      "name": "RedeTV News",
+      "videoId": "WxpyhIAEpCM",
+      "title": "[AO VIVO]  REDETV! NOTÍCIAS - 1ª EDIÇÃO | 08/07/2026"
+    },
+    {
+      "name": "TV Cultura",
+      "videoId": "SE2lEvjLy_s",
+      "title": "AO VIVO: SEGUNDA TEMPORADA CHEGA COM TUDO! | ANTIMATÉRIA - ENERGIA GEEK | 07/07/2026"
+    },
+    {
+      "name": "TV Brasil",
+      "videoId": "pOuOLEii9Bs",
+      "title": "Repórter Brasil, 07/07/2026"
+    }
+  ],
   "allChannels": [
     {
       "name": "CNN Brasil",
