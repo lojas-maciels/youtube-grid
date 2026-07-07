@@ -1,73 +1,12 @@
 {
-  "updatedAt": "2026-07-07T20:17:45.784Z",
+  "updatedAt": "2026-07-07T20:30:47.710Z",
   "videos": [
-    "FBR9ZogD_0w",
-    "IK1tSUYq2ag",
-    "5wTC8PEFA7E",
-    "KusjC-e88YM"
+    "6N3JR_LupSM",
+    "VayOrXlERHs",
+    "pHswEkH19uE",
+    "x4GNTjPe6_s"
   ],
-  "activeLives": [
-    {
-      "name": "CNN Brasil",
-      "videoId": "FBR9ZogD_0w",
-      "title": "AO VIVO: CNN 360º - 07/07/2026"
-    },
-    {
-      "name": "Revista Oeste",
-      "videoId": "IK1tSUYq2ag",
-      "title": "JORNAL DA OESTE SEGUNDA EDIÇÃO, COM GEISIANE FREITAS | 07/07/2026"
-    },
-    {
-      "name": "Gazeta do Povo",
-      "videoId": "5wTC8PEFA7E",
-      "title": "🔴NEM UNZINHO DO PT! O flagrante de Flávio na audiência nos EUA que assusta a economia | GAZETA AGORA"
-    },
-    {
-      "name": "BandNews FM",
-      "videoId": "KusjC-e88YM",
-      "title": "🔴[AO VIVO] ENTRE NÓS - 07/07/2026"
-    },
-    {
-      "name": "Record News",
-      "videoId": "tJikWUNqAJ4",
-      "title": "Link News - 07/07/2026"
-    },
-    {
-      "name": "Jovem Pan News",
-      "videoId": "bw7PCIzEy2M",
-      "title": "QUE JOGO BIZARRO!!! MESSI PERDE PÊNALTI, APARECE NA HORA CERTA E ARGENTINA CLASSIFICA! | PAN NA ÁREA"
-    },
-    {
-      "name": "UOL",
-      "videoId": "tFIaQrCeT7A",
-      "title": "Senado discute aumento da pena para violência sexual digital contra crianças e outras pautas"
-    },
-    {
-      "name": "SBT News",
-      "videoId": "Z6C51DigaP0",
-      "title": "🔴 AO VIVO: PODER EXPRESSO, com Raquel Landim | 07/07/2026 | SBT NEWS"
-    },
-    {
-      "name": "Band Jornalismo",
-      "videoId": "fSHtFTKjH00",
-      "title": "Assista à sabatina da BandNews TV com André Marinho, pré-candidato ao governo do Rio"
-    },
-    {
-      "name": "RedeTV News",
-      "videoId": "5xY3iNCx_6w",
-      "title": "[AO VIVO]  REDETV! NOTÍCIAS - 2ª EDIÇÃO | 07/07/2026"
-    },
-    {
-      "name": "TV Cultura",
-      "videoId": "SE2lEvjLy_s",
-      "title": "SEGUNDA TEMPORADA CHEGA COM TUDO! | ANTIMATÉRIA - ENERGIA GEEK | 07/07/2026"
-    },
-    {
-      "name": "TV Brasil",
-      "videoId": "7SimMtLl9oo",
-      "title": "🔴 SEM CENSURA RECEBE EDSON CELULARI, NIL MARINHO E VICTÓRIA CRISTINA E BRUNO MARCELINO"
-    }
-  ],
+  "activeLives": [],
   "allChannels": [
     {
       "name": "CNN Brasil",
