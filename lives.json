@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-07T09:58:51.212Z",
+  "updatedAt": "2026-07-07T10:15:50.902Z",
   "videos": [
     "-n0-qpWXkQw",
     "7it9E02WPB0",
     "QYQYNwWG8v4",
-    "gMqsU7OPPdw"
+    "51Lu8uWsH58"
   ],
   "activeLives": [
     {
@@ -24,8 +24,8 @@
     },
     {
       "name": "BandNews FM",
-      "videoId": "gMqsU7OPPdw",
-      "title": "Expresso São Paulo - 07/07/2026"
+      "videoId": "51Lu8uWsH58",
+      "title": "🔴[AO VIVO] Jornal BandNews FM - 07/07/2026"
     },
     {
       "name": "Record News",
@@ -36,6 +36,11 @@
       "name": "Jovem Pan News",
       "videoId": "VLLsiV265HU",
       "title": "JORNAL DA MANHÃ - 2° EDIÇÃO - 07/07/2026"
+    },
+    {
+      "name": "UOL",
+      "videoId": "BKZvVDKvNqc",
+      "title": "Rosana Argenta, das clínicas Saúde Livre, no Divã de CNPJ"
     },
     {
       "name": "SBT News",
